@@ -25,13 +25,6 @@
 <!--	  EPFL, IDIAP-->
 <!--	</p>-->
 
-	<p class="text-muted">
-	  Project page for the Multi-Modal Mean-Fields (CVPR 2017).
-	</p>
-	<p class="text-muted">
-	  <a href ="https://arxiv.org/abs/1611.07941"> Arxiv paper </a> and  <a href=".">code (Soon)</a> are available.
-	</p>
-
 
 	<h5 class="jumbotron-heading">Abstract</h5>
     <p class="text-muted">   Mean Field inference is central to statistical physics.  It has attracted much
