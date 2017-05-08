@@ -1,0 +1,109 @@
+<html lang="en">
+  <head>
+
+    <title>Supplementary</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="styles/album.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <section class="jumbotron">
+      <div class="container text-center">
+        <h1 class="jumbotron-heading text-center">
+	  Multi-Modal Mean-Fields via Cardinality-Based Clamping
+	</h1>
+
+<!--        <p class="jumbotron-heading text-center">-->
+<!--	  Pierre Baque*, Timur Bagautdinov*, Francois Fleuret, Pascal Fua-->
+<!--	</p>-->
+<!---->
+<!--        <p class="jumbotron-heading text-center">-->
+<!--	  EPFL, IDIAP-->
+<!--	</p>-->
+
+
+	<h5 class="jumbotron-heading">Abstract</h5>
+    <p class="text-muted">   Mean Field inference is central to statistical physics.  It has attracted much
+    interest  in  the Computer  Vision  community  to efficiently  solve  problems
+    expressible in terms of large Conditional  Random Fields.  However,
+    since it models the posterior probability distribution as a product of marginal probabilities,
+    it may fail to properly account for important dependencies between variables.
+    
+    We therefore replace the fully  factorized distribution of  Mean Field
+    by  a weighted  mixture of  such distributions,  that similarly  minimizes the
+    KL-Divergence to  the true posterior.   By introducing two new  ideas, namely,
+    conditioning  on groups  of  variables  instead of  single  ones  and using  a
+    parameter of  the conditional random field  potentials, that we identify  to the
+    temperature in the sense of statistical  physics to select such groups, we can
+    perform this minimization  efficiently.  Our extension of the clamping method
+    proposed  in previous  works  allows us  to both  produce  a more  descriptive
+    approximation of the true posterior and, inspired by the diverse MAP paradigms,
+    fit a mixture of Mean Field approximations.  We demonstrate that this
+    positively impacts real-world algorithms that initially relied on mean fields.
+	</p>
+
+
+        <h5 class="jumbotron-heading">Details for MMMF</h5>
+    	<p class="text-muted">
+	  Additional <a href="./pdf/derivations.pdf">proofs related to Section 5</a> and <a href="pdf/pseudocode.pdf">pseudo-code</a>.
+	</p>
+
+    <h5 class="jumbotron-heading">People Detection</h5>
+    <p class="text-muted">We illustrate, <a href="pdf/MMPOM.pdf">how our multi-modal algorithm of Section 7.2 resolves ambiguities</a>, on a single frame example.</p>
+
+    <p class="text-muted">We explain the <a href="pdf/MMKSP.pdf">details of our tracking algorithm of Section 7.2</a>, inspired from the K-Shortest Path one. </p>
+
+    <p class="text-muted">We propose a <a href="videos/MMKSP_short.mp4">short video</a> to highlight the performance of our tracking algorithm compared to the POM+KSP baseline. We use 4 modes per frame and our new version of KSP.</p>
+
+    <div class="row text-center">
+    <!--            <div class="card">
+     <a href="videos/MMKSP_short.mp4">
+     <img src="images/0039.png" alt="People Tracking" width=256 height=160>
+     </a> >-->
+    <p>
+    <video width="640" controls poster="images/0039.png"> <source src="videos/MMKSP_short.mp4" type="video/mp4">
+        </video>
+    </p>
+    <p class="text-muted">People Tracking video.</p>
+    
+    <p> </p>
+    <p>   </p>
+    <!--             </div> >-->
+    </div>
+
+    	<h5 class="jumbotron-heading">Semantic Segmentation</h5>
+    	<p class="text-muted">We provide the <a href="pdf/densecrf.pdf">derivation of the critical temperature</a> for the Dense Gaussian CRF, which is used in Section 6, together with experimental validation.</p>
+        
+        <p class="text-muted">A <a href="videos/MMSegmentation_short.mp4">short video</a> illustrating the advantages of the multi-modal segmentation of Section 7.3 is available. We use pairwise potentials from a Dense Gaussian CRF and unaries computed by a CNN. We generate 16 modes, from which the best is chosen by temporal consistency.</p>
+
+        <div class="row text-center">
+<!--            <div class="card">
+                <a href="videos/MMSegmentation_short.mp4">
+                    <img src="images/2007_004189_gt.png" alt="Semantic Segmentation" width=256 height=160>
+                        </a> >-->
+            <p>
+            <video width="640" controls poster="images/2007_004189_gt.png"> <source src="videos/MMSegmentation_short.mp4" type="video/mp4">
+                </video>
+            </p>
+            <p class="text-muted">Segmentation video.</p>
+<!--             </div> >-->
+        </div>
+        <p> </p>
+        <p>   </p>
+        <p class="text-muted">Finally, we present additional sample results for MMMF on the PascalVOC dataset.</p>
+        
+        <div class="row text-center">
+             <img src="images/MMMF_images.png" alt="Semantic Segmentation on Pascal VOC" width=600 height=750>
+            <p>
+
+
+
+      </div>
+    </section>
+
+  </body>
+</html>
